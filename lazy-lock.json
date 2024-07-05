@@ -1,4 +1,5 @@
 {
   "lazy.nvim": { "branch": "main", "commit": "407e65c7924989c1efed6bbc89e6287e2d140f02" },
+  "nvim-treesitter": { "branch": "master", "commit": "a8c082b4f5b3b70bde2ffb08cc112dfd7e515fb3" },
   "vim-moonfly-colors": { "branch": "master", "commit": "18d39acaa202e7cb772a674bc6238ec514cdd012" }
 }
