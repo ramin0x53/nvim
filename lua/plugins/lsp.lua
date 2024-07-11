@@ -73,7 +73,7 @@ return {
             end)
 
             require('mason-lspconfig').setup({
-                ensure_installed = { "gopls" },
+                ensure_installed = { "gopls", "pyright", "tsserver" },
                 handlers = {
                     -- this first function is the "default handler"
                     -- it applies to every language server without a "custom handler"
