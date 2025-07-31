@@ -6,9 +6,10 @@
 -- and lazy.nvim will automatically load them
 
 return {
-    -- Future plugin specs will be added here or in separate files
-    -- Example structure for when we add plugins:
-    -- require("plugins.specs.colorscheme"),
+    -- Load colorscheme plugin
+    require("plugins.specs.colorscheme"),
+
+    -- Future plugin specs will be added here:
     -- require("plugins.specs.treesitter"),
     -- require("plugins.specs.lsp"),
     -- etc.

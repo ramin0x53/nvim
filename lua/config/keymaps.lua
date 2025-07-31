@@ -51,3 +51,8 @@ keymap("n", "<leader>q", ":q<CR>", { desc = "Quit" })
 keymap("n", "<leader>sv", ":vsplit<CR>", { desc = "Split window vertically" })
 keymap("n", "<leader>sh", ":split<CR>", { desc = "Split window horizontally" })
 keymap("n", "<leader>sc", ":close<CR>", { desc = "Close current split" })
+
+-- Colorscheme switching
+keymap("n", "<leader>cm", ":colorscheme monokai-pro<CR>", { desc = "Set Monokai Pro theme" })
+keymap("n", "<leader>cs", ":colorscheme sonokai<CR>", { desc = "Set Sonokai theme" })
+keymap("n", "<leader>co", ":colorscheme onedark<CR>", { desc = "Set OneDark Pro theme" })
