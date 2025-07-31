@@ -56,3 +56,19 @@ keymap("n", "<leader>sc", ":close<CR>", { desc = "Close current split" })
 keymap("n", "<leader>cm", ":colorscheme monokai-pro<CR>", { desc = "Set Monokai Pro theme" })
 keymap("n", "<leader>cs", ":colorscheme sonokai<CR>", { desc = "Set Sonokai theme" })
 keymap("n", "<leader>co", ":colorscheme onedark<CR>", { desc = "Set OneDark Pro theme" })
+
+-- Go development mappings
+keymap("n", "<leader>gr", "<cmd>GoRun<cr>", { desc = "Go run" })
+keymap("n", "<leader>gb", "<cmd>GoBuild<cr>", { desc = "Go build" })
+keymap("n", "<leader>gt", "<cmd>GoTest<cr>", { desc = "Go test" })
+keymap("n", "<leader>gT", "<cmd>GoTestFunc<cr>", { desc = "Go test function" })
+keymap("n", "<leader>gc", "<cmd>GoCoverage<cr>", { desc = "Go coverage" })
+keymap("n", "<leader>gf", "<cmd>GoFmt<cr>", { desc = "Go format" })
+keymap("n", "<leader>gi", "<cmd>GoImport<cr>", { desc = "Go import" })
+keymap("n", "<leader>gm", "<cmd>GoMod tidy<cr>", { desc = "Go mod tidy" })
+
+-- Test runner mappings
+keymap("n", "<leader>tn", "<cmd>lua require('neotest').run.run()<cr>", { desc = "Run nearest test" })
+keymap("n", "<leader>tf", "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<cr>", { desc = "Run file tests" })
+keymap("n", "<leader>ts", "<cmd>lua require('neotest').summary.toggle()<cr>", { desc = "Toggle test summary" })
+keymap("n", "<leader>to", "<cmd>lua require('neotest').output.open({ enter = true })<cr>", { desc = "Show test output" })

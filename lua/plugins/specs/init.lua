@@ -9,8 +9,11 @@ return {
     -- Load colorscheme plugin
     require("plugins.specs.colorscheme"),
 
+    -- Load Go development plugins
+    require("plugins.specs.golang"),
+
     -- Future plugin specs will be added here:
-    -- require("plugins.specs.treesitter"),
-    -- require("plugins.specs.lsp"),
+    -- require("plugins.specs.telescope"),
+    -- require("plugins.specs.file-explorer"),
     -- etc.
 }
