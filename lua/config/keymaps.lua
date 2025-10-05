@@ -52,11 +52,6 @@ keymap("n", "<leader>sv", ":vsplit<CR>", { desc = "Split window vertically" })
 keymap("n", "<leader>sh", ":split<CR>", { desc = "Split window horizontally" })
 keymap("n", "<leader>sc", ":close<CR>", { desc = "Close current split" })
 
--- Colorscheme switching
-keymap("n", "<leader>cm", ":colorscheme monokai-pro<CR>", { desc = "Set Monokai Pro theme" })
-keymap("n", "<leader>cs", ":colorscheme sonokai<CR>", { desc = "Set Sonokai theme" })
-keymap("n", "<leader>co", ":colorscheme onedark<CR>", { desc = "Set OneDark Pro theme" })
-
 -- Go development mappings
 keymap("n", "<leader>gr", "<cmd>GoRun<cr>", { desc = "Go run" })
 keymap("n", "<leader>gb", "<cmd>GoBuild<cr>", { desc = "Go build" })
