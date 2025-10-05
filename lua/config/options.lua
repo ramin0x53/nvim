@@ -22,7 +22,9 @@ opt.incsearch = true  -- Show search matches as you type
 -- Appearance
 opt.termguicolors = true -- Enable 24-bit RGB colors
 opt.signcolumn = "yes"   -- Always show sign column
-opt.wrap = false         -- Don't wrap lines
+opt.wrap = true          -- Enable line wrapping
+opt.linebreak = true     -- Break lines at word boundaries
+opt.breakindent = true   -- Preserve indentation in wrapped lines
 opt.scrolloff = 8        -- Keep 8 lines above/below cursor
 opt.sidescrolloff = 8    -- Keep 8 columns left/right of cursor
 

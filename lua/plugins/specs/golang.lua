@@ -31,6 +31,33 @@ return {
         end,
     },
 
+    -- Mason LSP manager (must be set up first)
+    {
+        "williamboman/mason.nvim",
+        config = function()
+            require("mason").setup({
+                ui = {
+                    border = "rounded",
+                }
+            })
+        end,
+    },
+
+    -- Mason LSP Configuration
+    {
+        "williamboman/mason-lspconfig.nvim",
+        dependencies = { "williamboman/mason.nvim" },
+        config = function()
+            require("mason-lspconfig").setup({
+                ensure_installed = {
+                    "gopls", -- Go LSP server
+                    "lua_ls", -- Lua LSP (for Neovim config)
+                },
+                automatic_installation = true,
+            })
+        end,
+    },
+
     -- LSP Configuration
     {
         "neovim/nvim-lspconfig",
@@ -52,21 +79,6 @@ return {
             "rafamadriz/friendly-snippets",
         },
         config = function()
-            -- Setup Mason
-            require("mason").setup({
-                ui = {
-                    border = "rounded",
-                }
-            })
-
-            require("mason-lspconfig").setup({
-                ensure_installed = {
-                    "gopls", -- Go LSP server
-                    "lua_ls", -- Lua LSP (for Neovim config)
-                },
-                automatic_installation = true,
-            })
-
             -- Setup completion
             local cmp = require("cmp")
             local luasnip = require("luasnip")
