@@ -12,8 +12,16 @@ return {
     -- Load Go development plugins
     require("plugins.specs.golang"),
 
+    -- Load Rust development plugins
+    require("plugins.specs.rust"),
+
+    -- Load Node.js development plugins
+    require("plugins.specs.nodejs"),
+
+    -- Load Telescope and file browser
+    require("plugins.specs.telescope"),
+
     -- Future plugin specs will be added here:
-    -- require("plugins.specs.telescope"),
     -- require("plugins.specs.file-explorer"),
     -- etc.
 }
