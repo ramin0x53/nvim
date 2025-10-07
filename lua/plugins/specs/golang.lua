@@ -207,7 +207,6 @@ return {
             require("go").setup({
                 goimports = "gopls", -- use gopls for imports
                 gofmt = "gofumpt", -- use gofumpt for formatting
-                max_line_len = 120,
                 tag_transform = false,
                 test_dir = "",
                 comment_placeholder = "   ",
