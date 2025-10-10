@@ -33,7 +33,6 @@ return {
                     "cssls",
                     "tailwindcss",
                     "jsonls",
-                    "volar",
                     "svelte",
                 },
                 automatic_installation = true,

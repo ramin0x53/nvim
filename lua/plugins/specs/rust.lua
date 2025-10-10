@@ -37,7 +37,9 @@ return {
 				settings = {
 					["rust-analyzer"] = {
 						cargo = { allFeatures = true },
-						checkOnSave = { command = "clippy" },
+						-- Use the new config: checkOnSave is boolean; configure command via `check`
+						checkOnSave = true,
+						check = { command = "clippy" },
 					},
 				},
 			})
