@@ -9,6 +9,9 @@ return {
     -- Load colorscheme plugin
     require("plugins.specs.colorscheme"),
 
+    -- Centralized Mason setup (LSP server installation)
+    require("plugins.specs.mason"),
+
     -- Load Go development plugins
     require("plugins.specs.golang"),
 

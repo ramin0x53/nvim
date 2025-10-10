@@ -1,3 +1,5 @@
+---@diagnostic disable: undefined-global
+
 -- ~/.config/nvim/lua/plugins/specs/golang.lua
 -- Go development plugins and configuration
 
@@ -31,32 +33,7 @@ return {
         end,
     },
 
-    -- Mason LSP manager (must be set up first)
-    {
-        "williamboman/mason.nvim",
-        config = function()
-            require("mason").setup({
-                ui = {
-                    border = "rounded",
-                }
-            })
-        end,
-    },
-
-    -- Mason LSP Configuration
-    {
-        "williamboman/mason-lspconfig.nvim",
-        dependencies = { "williamboman/mason.nvim" },
-        config = function()
-            require("mason-lspconfig").setup({
-                ensure_installed = {
-                    "gopls", -- Go LSP server
-                    "lua_ls", -- Lua LSP (for Neovim config)
-                },
-                automatic_installation = true,
-            })
-        end,
-    },
+    -- Mason is configured globally in plugins/specs/mason.lua
 
     -- LSP Configuration
     {

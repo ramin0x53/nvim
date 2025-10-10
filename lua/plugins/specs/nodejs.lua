@@ -1,3 +1,5 @@
+---@diagnostic disable: undefined-global
+
 -- ~/.config/nvim/lua/plugins/specs/nodejs.lua
 -- Node.js/JavaScript/TypeScript development plugins and configuration
 
@@ -25,36 +27,7 @@ return {
         end,
     },
 
-    -- Mason LSP manager (must be set up first)
-    {
-        "williamboman/mason.nvim",
-        config = function()
-            require("mason").setup({
-                ui = {
-                    border = "rounded",
-                }
-            })
-        end,
-    },
-
-    -- Mason LSP Configuration (extending existing config)
-    {
-        "williamboman/mason-lspconfig.nvim",
-        dependencies = { "williamboman/mason.nvim" },
-        opts = function(_, opts)
-            opts.ensure_installed = opts.ensure_installed or {}
-            vim.list_extend(opts.ensure_installed, {
-                "ts_ls", -- TypeScript/JavaScript LSP server (updated from tsserver)
-                "eslint", -- ESLint LSP server
-                "html", -- HTML LSP server
-                "cssls", -- CSS LSP server
-                "tailwindcss", -- Tailwind CSS LSP server
-                "jsonls", -- JSON LSP server
-                "volar", -- Vue.js LSP server
-                "svelte", -- Svelte LSP server
-            })
-        end,
-    },
+    -- Mason is configured globally in plugins/specs/mason.lua
 
     -- Additional LSP configuration
     {
